@@ -1,0 +1,1 @@
+<?php require_once "../includes/db.php";require_once "../includes/auth.php";require_admin();$id=(int)($_GET["id"]??0);if($id>0){$stmt=$conn->prepare("DELETE FROM properties WHERE id=?");$stmt->execute([$id]);}header("Location:hotels.php");exit; ?>
